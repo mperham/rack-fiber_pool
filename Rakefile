@@ -9,7 +9,7 @@ begin
     gem.email = "mperham@gmail.com"
     gem.homepage = "http://github.com/mperham/rack-fiber_pool"
     gem.authors = ["Mike Perham"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_development_dependency "shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
