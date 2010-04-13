@@ -27,8 +27,9 @@ You can see your app's current pipeline of Rack middleware using:
 Add Rack::FiberPool to your middleware in `config/environment.rb`:
 
     require 'rack/fiber_pool'
-    Rails::Initializer.new do |config|
+    Rails::Initializer.run do |config|
       config.middleware.use Rack::FiberPool
+      config.threadsafe!
     end
 
 If you do experience odd issues, make sure it appears as early in the pipeline as possible.  Anything
