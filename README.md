@@ -7,7 +7,7 @@ Requirements
 ==============
 
 * Ruby 1.9
-* thin 1.2.7
+* EventMachine-based server (e.g. thin or rainbows)
 
 Usage
 =======
@@ -39,6 +39,12 @@ For example, ActionController::Session::CookieStore does not work if it appears 
 You can explicitly place the FiberPool like so:
 
     ActionController::Dispatcher.middleware.insert_before ActionController::Session::CookieStore, Rack::FiberPool
+
+    
+Thanks to
+==========
+
+Eric Wong - for adding explicit support for Rack::FiberPool to rainbows.
 
 
 Author
