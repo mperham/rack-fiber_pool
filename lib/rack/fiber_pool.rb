@@ -1,9 +1,6 @@
 require 'fiber_pool'
 
 module Rack
-  # Run each request in a Fiber.  This FiberPool is
-  # provided by em_postgresql.  Should probably split
-  # this dependency out.
   class FiberPool
     def initialize(app)
       @app = app
