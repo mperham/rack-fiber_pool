@@ -2,9 +2,11 @@ require 'fiber_pool'
 
 module Rack
   class FiberPool
+    SIZE = 100
+
     def initialize(app)
       @app = app
-      @fiber_pool = ::FiberPool.new
+      @fiber_pool = ::FiberPool.new(SIZE)
       yield @fiber_pool if block_given?
     end
 
