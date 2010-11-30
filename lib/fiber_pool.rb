@@ -55,7 +55,7 @@ class FiberPool
             block = @queue.shift
           else
             @busy_fibers.delete(Fiber.current.object_id)
-            @fibers << Fiber.current
+            @fibers.unshift Fiber.current
             block = Fiber.yield
           end
         end
