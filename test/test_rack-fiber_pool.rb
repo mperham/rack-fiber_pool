@@ -1,5 +1,8 @@
 require 'helper'
 
-class TestRackFiberPool < Test::Unit::TestCase
-  # An exercise left to the reader
+class TestRackFiberPool < MiniTest::Unit::TestCase
+
+  def test_usage
+    fail 'TODO'
+  end
 end

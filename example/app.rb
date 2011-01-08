@@ -1,6 +1,5 @@
 raise LoadError, "Ruby 1.9.1 only" if RUBY_VERSION < '1.9.1'
 
-require 'rubygems'
 require 'sinatra/base'
 require 'fiber'
 

@@ -33,8 +33,7 @@ Add Rack::FiberPool to your middleware in `config/environment.rb`:
     end
 
 If you do experience odd issues, make sure it appears as early in the pipeline as possible.  Anything
-that sets/gets thread local variables (like the Rails' session) or performs I/O should be later in the pipeline.
-For example, ActionController::Session::CookieStore does not work if it appears before Rack::FiberPool.
+that sets/gets thread local variables (like the Rails' session) or performs I/O should be later in the pipeline.  For example, ActionController::Session::CookieStore does not work if it appears before Rack::FiberPool.
 
 You can explicitly place the FiberPool like so:
 
@@ -50,4 +49,4 @@ Eric Wong - for adding explicit support for Rack::FiberPool to rainbows.
 Author
 =========
 
-Mike Perham, http://twitter.com/mperham, http://github.com/mperham, mperham AT gmail.com.
+Mike Perham, [Twitter](http://twitter.com/mperham), [Github](http://github.com/mperham), mperham AT gmail.com.

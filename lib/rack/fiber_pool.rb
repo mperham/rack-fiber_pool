@@ -2,11 +2,15 @@ require 'fiber_pool'
 
 module Rack
   class FiberPool
+    VERSION = '0.9.1'
     SIZE = 100
 
-    def initialize(app)
+    # The size of the pool is configurable:
+    #
+    #   use Rack::FiberPool, :size => 25
+    def initialize(app, options={})
       @app = app
-      @fiber_pool = ::FiberPool.new(SIZE)
+      @fiber_pool = ::FiberPool.new(options[:size] || SIZE)
       yield @fiber_pool if block_given?
     end
 
