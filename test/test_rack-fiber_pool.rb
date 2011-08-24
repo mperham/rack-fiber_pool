@@ -23,7 +23,7 @@ class TestRackFiberPool < MiniTest::Unit::TestCase
     catch :async do
       res = Rack::MockRequest.new(Rack::FiberPool.new(app)).get("/")
     end
-    assert_equal [500, {}, ""], app.result
+    assert_equal [500, {}, "Exception: I'm buggy! Please fix me."], app.result
   end
 
   def test_custom_rescue_exception
