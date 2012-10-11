@@ -11,7 +11,7 @@ module Rack
     def initialize(app, options={})
       @app = app
       @fiber_pool = ::FiberPool.new(options[:size] || SIZE)
-      @rescue_exception = options[:rescue_exception] || Proc.new { |env, e| [500, {}, "#{e.class.name}: #{e.message.to_s}"] }
+      @rescue_exception = options[:rescue_exception] || Proc.new { |env, e| [500, {}, ["#{e.class.name}: #{e.message.to_s}"]] }
       yield @fiber_pool if block_given?
     end
 
