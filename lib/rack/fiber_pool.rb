@@ -17,11 +17,12 @@ module Rack
 
     def call(env)
       call_app = lambda do
+        env['async.orig_callback'] = env.delete('async.callback')
         begin
           result = @app.call(env)
-          env['async.callback'].call result
+          env['async.orig_callback'].call result
         rescue ::Exception => e
-          env['async.callback'].call @rescue_exception.call(env, e)
+          env['async.orig_callback'].call @rescue_exception.call(env, e)
         end
       end
 
