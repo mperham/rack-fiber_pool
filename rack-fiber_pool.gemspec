@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
     "lib/fiber_pool.rb",
     "lib/rack/fiber_pool.rb",
   ]
-  s.homepage = "http://github.com/mperham/rack-fiber_pool"
+  s.homepage = "http://github.com/alebsack/rack-fiber_pool"
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.summary = s.description = "Rack middleware to run each request within a Fiber"
