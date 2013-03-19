@@ -38,7 +38,7 @@ class TestRackFiberPool < MiniTest::Unit::TestCase
   class TestBuggyApp
     attr_accessor :result
     def call(env)
-      env['async.callback'] = proc { |result| @result = result }
+      env['async.orig_callback'] = proc { |result| @result = result }
       raise Exception.new("I'm buggy! Please fix me.")
     end
   end
@@ -46,7 +46,7 @@ class TestRackFiberPool < MiniTest::Unit::TestCase
   class TestApp
     attr_accessor :result
     def call(env)
-      env['async.callback'] = proc { |result| @result = result }
+      env['async.orig_callback'] = proc { |result| @result = result }
       [200, {"Content-Type" => "text/plain"}, ["Hello world!"]]
     end
   end
