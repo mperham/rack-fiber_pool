@@ -2,7 +2,7 @@ require 'fiber_pool'
 
 module Rack
   class FiberPool
-    VERSION = '0.9.1'
+    VERSION = '0.9.3'
     SIZE = 100
 
     # The size of the pool is configurable:

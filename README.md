@@ -1,3 +1,6 @@
+The new homepage is
+[https://github.com/alebsack/rack-fiber_pool](https://github.com/alebsack/rack-fiber_pool)
+
 rack-fiber_pool
 ---------------
 
@@ -55,6 +58,12 @@ Thanks to
 ==========
 
 Eric Wong - for adding explicit support for Rack::FiberPool to rainbows.
+
+
+Changes
+==========
+
+0.9.3 - fix incompatibility with sinatra streaming, new maintainer (alebsack)
 
 
 Author
