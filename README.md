@@ -1,5 +1,4 @@
-The new homepage is
-[https://github.com/alebsack/rack-fiber_pool](https://github.com/alebsack/rack-fiber_pool)
+# The new homepage is https://github.com/alebsack/rack-fiber_pool
 
 rack-fiber_pool
 ---------------
