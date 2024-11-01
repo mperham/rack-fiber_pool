@@ -1,18 +1,30 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    base64 (0.2.0)
     daemons (1.1.2)
     eventmachine (0.12.10)
     minitest (2.0.2)
-    rack (1.2.2)
-    sinatra (1.2.2)
-      rack (~> 1.1)
-      tilt (>= 1.2.2, < 2.0)
+    mustermann (3.0.3)
+      ruby2_keywords (~> 0.0.1)
+    rack (3.1.8)
+    rack-protection (4.0.0)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.0.0)
+      rack (>= 3.0.0)
+    ruby2_keywords (0.0.5)
+    sinatra (4.0.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.0.0)
+      rack-session (>= 2.0.0, < 3)
+      tilt (~> 2.0)
     thin (1.2.11)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    tilt (1.2.2)
+    tilt (2.4.0)
 
 PLATFORMS
   ruby
